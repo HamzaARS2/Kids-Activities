@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <item android:id="@+id/nav_item_one"
+        android:title="Nav Item"
+        android:icon="@drawable/ic_ballons_bottom_menu"/>
+    <item android:id="@+id/nav_item_two"
+        android:title="Nav Item"
+        android:icon="@drawable/ic_recent_bottom_menu"/>
+    <item android:id="@+id/nav_item_three"
+        android:title="Nav Item"
+        android:icon="@drawable/ic_settings"/>
+
+
+<!--    <item android:title="Others">-->
+
+<!--        <menu>-->
+
+<!--            &lt;!&ndash;            <item android:id="@+id/nav_privacy_menu_item"&ndash;&gt;-->
+<!--            &lt;!&ndash;                android:title="Privacy Policy"&ndash;&gt;-->
+<!--            &lt;!&ndash;                android:icon="@drawable/ic_privacy_policy"/>&ndash;&gt;-->
+<!--            <item android:id="@+id/nav_share_menu_item"-->
+<!--                android:title="Share"-->
+<!--                android:icon="@drawable/ic_share_app"/>-->
+
+<!--            <item android:id="@+id/nav_rate_menu_item"-->
+<!--                android:title="Rate App"-->
+<!--                android:icon="@drawable/ic_star_app"/>-->
+<!--            <item android:id="@+id/nav_exit_menu_item"-->
+<!--                android:title="Exit"-->
+<!--                android:icon="@drawable/ic_exit_app"/>-->
+
+<!--        </menu>-->
+
+<!--    </item>-->
+</menu>
