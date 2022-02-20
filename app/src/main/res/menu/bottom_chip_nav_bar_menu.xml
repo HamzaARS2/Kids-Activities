@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item android:id="@+id/recent_item"
+        android:icon="@drawable/ic_recent_bottom_menu"
+        android:title="@string/recent"
+        app:cnb_iconColor="@color/colorOnPrimary"/>
+
+    <item android:id="@+id/space_item"
+        android:title="@string/today"
+        />
+    <item android:id="@+id/space1_item"
+        android:title="@string/today"
+        />
+
+
+
+    <item android:id="@+id/settings_item"
+        android:icon="@drawable/ic_settings"
+        android:title="@string/settings"
+        app:cnb_iconColor="@color/colorOnPrimary"/>
+</menu>

@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Bal-Mukund</string>
+    <string name="learn">Learn</string>
+    <string name="recent">Recent</string>
+    <string name="today">Today</string>
+    <string name="health_tip">Health Tip!</string>
+    <string name="health_tip_text">Eating with our fingers while sitting cross-legged on the floor has numerous positive effects on the body. it keeps our spine straight, helps with digestion, and creates the proper attitude of revernce towards our food</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="bodyEx">Do unto others, as you would have them do unto you!</string>
+    <string name="channel_name">BalMukund Channel</string>
+    <string name="channel_description">This channel used by BalMukund app</string>
+    <string name="today_s_quote">Today\'s topic</string>
+    <string name="let_s_play_together">Post title</string>
+    <string name="play_is_our_brain_s_favorite_way_of_learning">Play is our brain s favorite way of learning</string>
+    <string name="settings">Settings</string>
+</resources>

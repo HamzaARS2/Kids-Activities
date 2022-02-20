@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "781048999272",
+    "project_id": "balmukund-9897c",
+    "storage_bucket": "balmukund-9897c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:781048999272:android:990d1f8b2ab79e62e23add",
+        "android_client_info": {
+          "package_name": "com.example.bal_mukund"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "781048999272-b5buemi5svre4eanaqcqrjcrfa0oa7i7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA-uZbefaGsfIz6vewHTb-mqyepQNcui4w"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "781048999272-b5buemi5svre4eanaqcqrjcrfa0oa7i7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
