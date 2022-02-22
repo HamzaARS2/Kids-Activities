@@ -17,4 +17,34 @@
 
     <string name="open">Open</string>
     <string name="close">Close</string>
+    <string name="the_beautiful_short_description_about_bal_mukund_app">The beautiful short description about Bal-Mukund app</string>
+    <string name="bal_mukund">Bal-Mukund</string>
+    <string name="bal_mukund_site"><u>www.bal-mukund.org</u>.</string>
+    <string name="meditation_videos">Meditation videos</string>
+    <string name="about_us">About us</string>
+    <string name="connect">Connect</string>
+    <string name="review_the_app">Review the app</string>
+    <string name="title_activity_connect">Connect_Activity</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="facebook">Facebook</string>
+    <string name="quote">Quote</string>
+    <string name="recent_quotes">Recent quotes</string>
+    <string name="exit">Exit</string>
+    <string name="others">Others</string>
+    <string name="app_description">Specially Designed Personality Development program for children. Conceptualized and mentored by H.H. Swami Mukunananda ji. Holistic program for physical, mental, emotional and spiritual upliftment of children.</string>
+    <string name="free_classes_for_kids">Free classes for kids</string>
+    <string name="more_about_swamiji">More about Swamiji</string>
+    <string name="about_jkyog">About JKYog</string>
+    <string name="volunteer">Volunteer</string>
+    <string name="contact">Contact</string>
+    <string name="onboarding_disc">To be active learner and learn interesting things, you have to visit our app daily!</string>
+    <string name="get_started">Get Started!</string>
+    <string name="skip">Skip</string>
 </resources>

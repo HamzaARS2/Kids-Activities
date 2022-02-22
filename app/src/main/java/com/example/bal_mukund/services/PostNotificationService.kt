@@ -23,8 +23,7 @@ import com.google.firebase.messaging.RemoteMessage
 
 class PostNotificationService : FirebaseMessagingService() {
 
-//    private val fireStore: FirebaseFirestore = Firebase.firestore
-//    private val postsColl: CollectionReference = fireStore.collection("posts")
+    // This is was for postman api
 
     override fun onMessageReceived(message: RemoteMessage) {
         super.onMessageReceived(message)

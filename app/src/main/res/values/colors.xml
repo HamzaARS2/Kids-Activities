@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="purple_200">#FFBB86FC</color>
     <color name="purple_500">#FF6200EE</color>
@@ -7,12 +6,25 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="colorPrimary">#ff9500</color>
-    <color name="colorPrimaryVariant">#ff8800</color>
-    <color name="colorOnPrimary">#FFA000</color>
+    <color name="colorPrimary">#00677d</color>
+    <color name="colorPrimaryVariant">#001f27</color>
+    <color name="colorOnPrimary">#ffffff</color>
+    <color name="secondary">#4b6269</color>
+    <color name="colorSecondary">#ffffff</color>
+    <color name="colorOnSecondary">#ffffff</color>
 
-
-    <color name="textColorPrimary">#212121</color>
-    <color name="textColorSecondary">#757575</color>
+    <color name="textColorPrimary">#001f27</color>
+    <color name="textColorSecondary">#061e25</color>
     <color name="colorAccent">#448AFF</color>
+    <color name="facebook_color">#4267B2</color>
+    <color name="youtube_color">#FF0000</color>
+    <color name="instagram_color">#ffc838</color>
+    <color name="site_color">#3280C3</color>
+    <color name="free_classes_bg_color">#f1d9df</color>
+    <color name="about_swamiji_bg_color">#dae5fd</color>
+    <color name="about_jkyog_bg_color">#d8f6e2</color>
+    <color name="volunteer_bg_color">#f4eed7</color>
+    <color name="contact_bg_color">#f2e8f4</color>
+    <color name="about_us_btns_text_color">#8b6661</color>
+    <color name="test">#0091AD</color>
 </resources>

@@ -56,7 +56,7 @@
                 android:layout_width="0dp"
                 android:layout_height="0dp"
                 android:ellipsize="end"
-                android:fontFamily="@font/chelsea_market"
+                android:fontFamily="@font/viga"
                 android:gravity="center_vertical"
                 android:lineSpacingExtra="10dp"
                 android:maxLines="3"

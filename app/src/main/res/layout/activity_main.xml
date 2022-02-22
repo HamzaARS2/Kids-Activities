@@ -12,47 +12,32 @@
         android:layout_height="match_parent">
 
 
-        <androidx.appcompat.widget.Toolbar
-            android:id="@+id/toolbar"
-            android:layout_width="match_parent"
-            android:layout_height="?actionBarSize"
+<!--        <androidx.appcompat.widget.Toolbar-->
+<!--            android:id="@+id/toolbar"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="?actionBarSize"-->
 
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toTopOf="parent">-->
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:fontFamily="@font/acme"
-                android:text="@string/learn"
-                android:textColor="@color/black"
-                android:textSize="24sp"
-                android:textStyle="bold"
-                tools:layout_editor_absoluteX="16dp"
-                tools:layout_editor_absoluteY="13dp" />
-
-            <ImageButton
-                android:layout_width="30dp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="end"
-                android:layout_marginEnd="15dp"
-                android:background="@color/white"
-                android:scaleType="fitCenter"
-                android:src="@drawable/bell" />
-
-            <!--        <ImageButton-->
-            <!--            android:layout_width="30dp"-->
-            <!--            android:layout_height="wrap_content"-->
-            <!--            android:layout_gravity="start"-->
-            <!--            android:layout_marginEnd="15dp"-->
-            <!--            android:background="@color/white"-->
-            <!--            android:scaleType="fitCenter"-->
-            <!--            android:src="@drawable/ic_nav_menu" />-->
+<!--            <TextView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_gravity="center"-->
+<!--                android:fontFamily="@font/acme"-->
+<!--                android:text="@string/bal_mukund"-->
+<!--                android:textColor="@color/black"-->
+<!--                android:textSize="24sp"-->
+<!--                android:textStyle="bold"-->
+<!--                tools:layout_editor_absoluteX="16dp"-->
+<!--                tools:layout_editor_absoluteY="13dp" />-->
 
 
-        </androidx.appcompat.widget.Toolbar>
+
+
+
+
 
 
     <FrameLayout
@@ -61,9 +46,11 @@
         app:layout_constraintBottom_toBottomOf="@+id/main_fragments_container"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/toolbar">
+        app:layout_constraintTop_toTopOf="parent">
 
     </FrameLayout>
+
+
 
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/main_fragments_container"
@@ -73,7 +60,22 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+        app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/nav_menu_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_nav_menu"
+            android:background="@android:color/transparent"
+            app:layout_constraintBottom_toTopOf="@+id/mainProgressbar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.06"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.060000002" />
 
     <ProgressBar
         android:id="@+id/mainProgressbar"
@@ -113,7 +115,6 @@
                 android:layout_marginEnd="16dp"
                 android:background="@android:color/transparent"
                 app:cnb_iconSize="30dp"
-
                 app:cnb_menuResource="@menu/bottom_chip_nav_bar_menu"
                 app:cnb_orientationMode="horizontal"
                 app:cnb_textAppearance="@style/Bottom_text_style"

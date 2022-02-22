@@ -5,7 +5,7 @@
     <item android:id="@+id/recent_item"
         android:icon="@drawable/ic_recent_bottom_menu"
         android:title="@string/recent"
-        app:cnb_iconColor="@color/colorOnPrimary"/>
+        app:cnb_iconColor="@color/colorPrimaryVariant"/>
 
     <item android:id="@+id/space_item"
         android:title="@string/today"
@@ -19,5 +19,5 @@
     <item android:id="@+id/settings_item"
         android:icon="@drawable/ic_settings"
         android:title="@string/settings"
-        app:cnb_iconColor="@color/colorOnPrimary"/>
+        app:cnb_iconColor="@color/colorPrimaryVariant"/>
 </menu>

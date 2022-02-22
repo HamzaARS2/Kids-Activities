@@ -1,53 +1,79 @@
 package com.example.bal_mukund.ui
 
 import android.content.Intent
-import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import androidx.fragment.app.FragmentManager
+import android.view.View
+import androidx.viewpager2.widget.ViewPager2
 import com.example.bal_mukund.R
+import com.example.bal_mukund.adapters.onboarding.OnBoardingAdapter
+import com.example.bal_mukund.adapters.onboarding.OnBoardingItem
 import com.example.bal_mukund.databinding.ActivityOnBoardingBinding
-import com.ramotion.paperonboarding.PaperOnboardingFragment
-import com.ramotion.paperonboarding.PaperOnboardingPage
 
-class OnBoardingActivity : AppCompatActivity() {
-    lateinit var binding:ActivityOnBoardingBinding
-    lateinit var fragmentManager: FragmentManager
+
+class OnBoardingActivity : AppCompatActivity(), View.OnClickListener {
+
+    private val binding by lazy {
+        ActivityOnBoardingBinding.inflate(layoutInflater)
+    }
+
+    private lateinit var onBoardingAdapter: OnBoardingAdapter
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityOnBoardingBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        fragmentManager = supportFragmentManager
-
-        val onBoardingFrag = PaperOnboardingFragment.newInstance(getElements())
-
-        val ft = fragmentManager.beginTransaction()
-        ft.add(R.id.onBoardingFragments_container,onBoardingFrag)
-        ft.commit()
-
-        onBoardingFrag.setOnRightOutListener {
-            startActivity(Intent(this, MainActivity::class.java))
-            finish()
+        onBoardingAdapter = OnBoardingAdapter(getOnBoardingItems())
+        binding.onboardingViewpager.apply {
+            adapter = onBoardingAdapter
+            orientation = ViewPager2.ORIENTATION_HORIZONTAL
         }
 
+        binding.onboardingViewpager.registerOnPageChangeCallback(object :ViewPager2.OnPageChangeCallback() {
+            override fun onPageSelected(position: Int) {
+                super.onPageSelected(position)
+                if (position == 2) {
+                    binding.getStartedBtn.visibility = View.VISIBLE
+                    binding.skipBtn.visibility = View.GONE
+                    binding.nextBtn.visibility = View.GONE
+                }
+                else {
+                    binding.getStartedBtn.visibility = View.GONE
+                    binding.skipBtn.visibility = View.VISIBLE
+                    binding.nextBtn.visibility = View.VISIBLE
+                }
 
+
+            }
+        })
+        binding.indicator.setViewPager(binding.onboardingViewpager)
+
+        binding.getStartedBtn.setOnClickListener(this)
+        binding.skipBtn.setOnClickListener(this)
+        binding.nextBtn.setOnClickListener(this)
     }
 
-    private fun getElements(): ArrayList<PaperOnboardingPage> {
 
-        return arrayListOf(
-            PaperOnboardingPage("Be Healthy!",
-                "Being healthy is so important for us children",
-                Color.parseColor("#FFA000"),
-                R.drawable.kid_doctors,R.drawable.ic_healthcare_onboarding),
-            PaperOnboardingPage("Learn new things!",
-                "To be active learner and learn interesting things, you have to visit our app daily!",
-                Color.parseColor("#FFA000"),
-                R.drawable.onboarding2,R.drawable.ic_learn_onboarding),
-            PaperOnboardingPage("Play with us!",
-                "Every child should play.Come to play with us!",
-                Color.parseColor("#FFA000"),
-                R.drawable.onboarding3,R.drawable.ic_play_onboarding),
+
+    private fun getOnBoardingItems(): Array<OnBoardingItem> {
+        return arrayOf(
+            OnBoardingItem(R.drawable.onboarding1,"Be Healthy!","Being healthy is so important for us children"),
+            OnBoardingItem(R.drawable.onboarding2,"Learn new things!","To be active learner and learn interesting things, you have to visit our app daily!"),
+            OnBoardingItem(R.drawable.onboarding3,"Play with us!","Every child should play. Come to play with us!")
         )
     }
+
+    override fun onClick(view: View?) {
+        val viewPager = binding.onboardingViewpager
+        if (view?.id == R.id.next_btn){
+            if (viewPager.currentItem != 2){
+                viewPager.currentItem = viewPager.currentItem +1
+            }
+            return
+        }
+        startActivity(Intent(this,MainActivity::class.java))
+        finish()
+
+    }
+
 }

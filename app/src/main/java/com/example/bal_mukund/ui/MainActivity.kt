@@ -1,6 +1,6 @@
 package com.example.bal_mukund.ui
 
-import android.graphics.drawable.Drawable
+import android.content.Intent
 import android.os.Bundle
 import android.view.MenuItem
 import android.view.View
@@ -8,8 +8,10 @@ import android.widget.Toast
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
+import androidx.core.view.GravityCompat
 import androidx.core.view.get
 import androidx.drawerlayout.widget.DrawerLayout
+import androidx.fragment.app.FragmentTransaction
 import androidx.lifecycle.ViewModelProvider
 import com.example.bal_mukund.SettingsFragment
 import com.example.bal_mukund.databinding.ActivityMainBinding
@@ -19,10 +21,8 @@ import com.example.bal_mukund.R
 import com.example.bal_mukund.ui.fragments.RecentFragment
 import com.example.bal_mukund.ui.fragments.TodayFragment
 import com.example.bal_mukund.viewmodels.MainViewModel
-import com.yarolegovich.slidingrootnav.SlidingRootNav
 
 
-import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.navigation.NavigationView
 
 
@@ -64,11 +64,6 @@ class MainActivity : AppCompatActivity(), LatestPostListener,
             openTodayPost()
         }
 
-
-
-
-
-
     }
 
     private fun matchFragmentsWithNavBar() {
@@ -76,24 +71,18 @@ class MainActivity : AppCompatActivity(), LatestPostListener,
             val transaction = supportFragmentManager.beginTransaction()
             when (itemId) {
                 R.id.settings_item -> {
-                    transaction.replace(
-                        R.id.main_fragments_container,
-                        SettingsFragment()
-                    )
+                    openSettings(transaction)
                 }
-                R.id.recent_item -> transaction.replace(
-                    R.id.main_fragments_container,
-                    RecentFragment()
-                )
+                R.id.recent_item -> {
+                    openRecentQuotes(transaction)
+                }
             }
-            transaction.commit()
         }
 
     }
 
     override fun onTodayPostReceived(post: Post) {
         todayPost = post
-        Toast.makeText(this, "activity = ${post.topic}", Toast.LENGTH_SHORT).show()
         binding.mainFragmentsContainer.visibility = View.VISIBLE
         binding.mainProgressbar.visibility = View.GONE
         openTodayPost()
@@ -108,17 +97,29 @@ class MainActivity : AppCompatActivity(), LatestPostListener,
         binding.chipNavigationBar.setItemSelected(R.id.settings_item, false)
     }
 
+    private fun openRecentQuotes(transaction:FragmentTransaction){
+        transaction.replace(
+            R.id.main_fragments_container,
+            RecentFragment()
+        ).commit()
+    }
+
+    private fun openSettings(transaction: FragmentTransaction){
+        transaction.replace(
+            R.id.main_fragments_container,
+            SettingsFragment()
+        ).commit()
+    }
+
     private fun initViews(){
-//        setSupportActionBar(binding.toolbar)
-//        binding.toolbar.title = ""
-
-
         drawerLayout = findViewById(R.id.drawer)
-        toggle = ActionBarDrawerToggle(this,drawerLayout,binding.toolbar,R.string.open,R.string.close)
+        toggle = ActionBarDrawerToggle(this,drawerLayout,R.string.open,R.string.close)
         drawerLayout.addDrawerListener(toggle)
         toggle.syncState()
         binding.navigationView.setNavigationItemSelectedListener(this)
-        binding.toolbar.setNavigationIcon(R.drawable.ic_nav_menu)
+        binding.navMenuBtn.setOnClickListener {
+            drawerLayout.openDrawer(GravityCompat.START)
+        }
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
@@ -129,31 +130,31 @@ class MainActivity : AppCompatActivity(), LatestPostListener,
     }
 
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
-        //val transaction = supportFragmentManager.beginTransaction()
+        val transaction = supportFragmentManager.beginTransaction()
 
         when(item.itemId){
-            R.id.nav_item_one -> {
-                //openTodayPost()
-                Toast.makeText(this, "clicked", Toast.LENGTH_SHORT).show()
-
+            R.id.nav_quote_item -> {
+                openTodayPost()
+                drawerLayout.close()
             }
-            R.id.nav_item_two -> {
-//                transaction.replace(
-//                    R.id.main_fragments_container,
-//                    SettingsFragment()
-//                )
-                Toast.makeText(this, "clicked", Toast.LENGTH_SHORT).show()
-
+            R.id.nav_recent_quotes_item -> {
+                openRecentQuotes(transaction)
+                drawerLayout.close()
             }
-            R.id.nav_item_three -> {
-//                transaction.replace(
-//                    R.id.main_fragments_container,
-//                    RecentFragment()
-//                )
-                Toast.makeText(this, "clicked", Toast.LENGTH_SHORT).show()
+            R.id.nav_meditation_videos_item -> {
+                  Toast.makeText(this, "clicked", Toast.LENGTH_SHORT).show()
+            }
+            R.id.nav_about_us_item -> {
+                startActivity(Intent(this,AboutUsActivity::class.java))
+            }
+            R.id.nav_connect_item -> {
+                startActivity(Intent(this,ConnectActivity::class.java))
+            }
+
+            R.id.nav_close_app_item -> {
+
             }
         }
-       // transaction.commit()
         return true
     }
 

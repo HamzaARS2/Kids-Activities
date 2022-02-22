@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.BalMukund">
         <activity
+            android:name=".ui.AboutUsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.ConnectActivity"
+            android:exported="false" />
+        <activity
             android:name=".ui.RecentPostPagerActivity"
             android:exported="false" />
         <activity
