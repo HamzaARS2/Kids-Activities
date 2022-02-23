@@ -17,6 +17,7 @@ import com.example.bal_mukund.interfaces.FirestoreListener
 import com.example.bal_mukund.model.Post
 import com.example.bal_mukund.ui.RecentPostPagerActivity
 import com.example.bal_mukund.viewmodels.MainViewModel
+import com.google.android.material.shape.MaterialShapeUtils
 
 
 class RecentFragment : Fragment(),FirestoreListener, PostAdapter.RecentPostListener {
@@ -29,6 +30,7 @@ class RecentFragment : Fragment(),FirestoreListener, PostAdapter.RecentPostListe
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
         mainViewModel.getAllPosts(this)
         postAdapter = PostAdapter(arrayListOf(),this)
     }

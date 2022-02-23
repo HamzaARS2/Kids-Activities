@@ -7,7 +7,6 @@ import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AppCompatActivity
-import androidx.appcompat.app.AppCompatDelegate
 import androidx.core.view.GravityCompat
 import androidx.core.view.get
 import androidx.drawerlayout.widget.DrawerLayout
@@ -53,7 +52,7 @@ class MainActivity : AppCompatActivity(), LatestPostListener,
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
         initViews()
-        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
+        //AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
         mainViewModel.getLatestPost(this)
         binding.chipNavigationBar.background = null
         binding.chipNavigationBar[1].isEnabled = false
@@ -70,10 +69,10 @@ class MainActivity : AppCompatActivity(), LatestPostListener,
         binding.chipNavigationBar.setOnItemSelectedListener { itemId ->
             val transaction = supportFragmentManager.beginTransaction()
             when (itemId) {
-                R.id.settings_item -> {
-                    openSettings(transaction)
+                R.id.chip_nav_learn_more_item -> {
+                    Toast.makeText(this, "Opens Learn More screen", Toast.LENGTH_SHORT).show()
                 }
-                R.id.recent_item -> {
+                R.id.chip_nav_recent_item -> {
                     openRecentQuotes(transaction)
                 }
             }
@@ -88,13 +87,15 @@ class MainActivity : AppCompatActivity(), LatestPostListener,
         openTodayPost()
     }
 
+
+
     private fun openTodayPost() {
         val todayFragment = TodayFragment().newInstance(todayPost)
         supportFragmentManager.beginTransaction()
             .replace(R.id.main_fragments_container, todayFragment)
             .commit()
-        binding.chipNavigationBar.setItemSelected(R.id.recent_item, false)
-        binding.chipNavigationBar.setItemSelected(R.id.settings_item, false)
+        binding.chipNavigationBar.setItemSelected(R.id.chip_nav_recent_item, false)
+        binding.chipNavigationBar.setItemSelected(R.id.chip_nav_learn_more_item, false)
     }
 
     private fun openRecentQuotes(transaction:FragmentTransaction){
@@ -149,6 +150,10 @@ class MainActivity : AppCompatActivity(), LatestPostListener,
             }
             R.id.nav_connect_item -> {
                 startActivity(Intent(this,ConnectActivity::class.java))
+            }
+            R.id.nav_settings_item -> {
+                openSettings(transaction)
+                drawerLayout.close()
             }
 
             R.id.nav_close_app_item -> {

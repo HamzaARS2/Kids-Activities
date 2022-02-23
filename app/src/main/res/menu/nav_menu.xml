@@ -17,6 +17,9 @@
     <item android:id="@+id/nav_connect_item"
         android:title="@string/connect"
         android:icon="@drawable/ic_connect" />
+    <item android:id="@+id/nav_settings_item"
+        android:title="@string/settings"
+        android:icon="@drawable/ic_settings" />
 
 
 

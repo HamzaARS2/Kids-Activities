@@ -1,5 +1,6 @@
 package com.example.bal_mukund.ui.fragments
 
+import android.content.Context
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -14,6 +15,7 @@ import coil.load
 import com.example.bal_mukund.R
 import com.example.bal_mukund.model.Post
 import com.example.bal_mukund.viewmodels.MainViewModel
+import com.google.android.material.shape.MaterialShapeUtils
 
 class TodayFragment : Fragment() {
 
@@ -54,6 +56,8 @@ class TodayFragment : Fragment() {
         return fragment
     }
 
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -83,6 +87,7 @@ class TodayFragment : Fragment() {
         todayTopicTv.text = todayPost.topic
         titleTv.text = todayPost.title
         bodyTv.text = todayPost.body
+        //MaterialShapeUtils.setParentAbsoluteElevation(bgImage);
     }
 
     private fun initViews(inflater: LayoutInflater, container: ViewGroup?, type: Int): View {

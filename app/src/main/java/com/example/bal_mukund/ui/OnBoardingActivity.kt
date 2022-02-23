@@ -1,6 +1,8 @@
 package com.example.bal_mukund.ui
 
 import android.content.Intent
+import android.graphics.Color
+import android.graphics.drawable.ColorDrawable
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -43,10 +45,14 @@ class OnBoardingActivity : AppCompatActivity(), View.OnClickListener {
                     binding.nextBtn.visibility = View.VISIBLE
                 }
 
-
+                when(position){
+                    0 ->{binding.onBoardingCL.setBackgroundColor(Color.parseColor("#FFFFFF"))}
+                    1 ->{binding.onBoardingCL.setBackgroundColor(Color.parseColor("#ADECFF"))}
+                    2 ->{binding.onBoardingCL.setBackgroundColor(Color.parseColor("#59D6F8"))}
+                }
             }
         })
-        binding.indicator.setViewPager(binding.onboardingViewpager)
+        binding.indicator.setViewPager2(binding.onboardingViewpager)
 
         binding.getStartedBtn.setOnClickListener(this)
         binding.skipBtn.setOnClickListener(this)
@@ -73,6 +79,8 @@ class OnBoardingActivity : AppCompatActivity(), View.OnClickListener {
         }
         startActivity(Intent(this,MainActivity::class.java))
         finish()
+
+
 
     }
 

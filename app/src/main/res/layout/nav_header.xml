@@ -33,12 +33,11 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
-            android:fontFamily="@font/fredoka_one"
+            android:fontFamily="@font/viga"
             android:gravity="bottom"
             android:padding="2dp"
             android:text="@string/app_name"
-            android:textColor="@android:color/white"
-            android:textSize="14sp"
+            android:textSize="16sp"
             android:textStyle="bold"
           />
 
@@ -50,7 +49,6 @@
             android:fontFamily="sans-serif"
             android:padding="2dp"
             android:text="@string/bal_mukund_site"
-            android:textColor="@color/site_color"
             android:textSize="12sp"
             android:textStyle="normal"
        />
