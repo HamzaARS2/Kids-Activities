@@ -11,7 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
         <ImageView
-            android:id="@+id/today_post_image"
+            android:id="@+id/recent_post_activity_image"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:scaleType="centerCrop"
@@ -35,7 +35,7 @@
             app:layout_constraintTop_toTopOf="@+id/guideline4">
 
             <TextView
-                android:id="@+id/today_post_quote_tv"
+                android:id="@+id/recent_post_activity_quote_tv"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:fontFamily="@font/fredoka_one"

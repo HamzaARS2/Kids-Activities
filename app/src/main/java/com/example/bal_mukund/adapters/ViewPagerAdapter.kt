@@ -22,38 +22,19 @@ class ViewPagerAdapter(
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
-        return if (viewType == Constants.POST_TYPE_ONE) {
-            PostOneViewHolder(
+        return PostOneViewHolder(
                 LayoutInflater.from(parent.context).inflate(R.layout.post_type_item, parent, false),
                 listener
             )
-        } else {
-            PostTwoViewHolder(
-                LayoutInflater.from(parent.context)
-                    .inflate(R.layout.post_type_item_two, parent, false), listener
-            )
-        }
     }
 
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
-        val post = posts[position]
-        if (holder is PostOneViewHolder){
-            holder.bind(post)
-        }else{
-            val holderTwo = holder as PostTwoViewHolder
-            holderTwo.bind(post)
-        }
+
     }
 
     override fun getItemCount(): Int = posts.size
 
-    override fun getItemViewType(position: Int): Int {
-      return if (posts[position].type == 1){
-          Constants.POST_TYPE_ONE
-      }else
-          Constants.POST_TYPE_TWO
 
-    }
 
     fun setPosts(posts: ArrayList<Post>){
         posts.addAll(posts)
@@ -64,29 +45,9 @@ class ViewPagerAdapter(
     inner class PostOneViewHolder(itemView: View, private val mListener: PostClickListener) :
         RecyclerView.ViewHolder(itemView),
         View.OnClickListener {
-        val topicTv: TextView
-        val titleTv: TextView
-        val bodyTv: TextView
-        val kidsImgView: ImageView
-        val bgImageview: ImageView
 
-        init {
-            topicTv = itemView.findViewById(R.id.post_one_topic)
-            titleTv = itemView.findViewById(R.id.post_one_title)
-            bodyTv = itemView.findViewById(R.id.post_one_body)
-            kidsImgView = itemView.findViewById(R.id.post_one_kidsImage)
-            bgImageview = itemView.findViewById(R.id.post_one_bg_image)
 
-            itemView.setOnClickListener(this)
-        }
 
-        fun bind(post: Post) {
-            kidsImgView.load(post.imageUrl)
-            bgImageview.load(post.backgroundImg)
-            topicTv.text = post.topic
-            titleTv.text = post.title
-            bodyTv.text = post.body
-        }
 
 
         override fun onClick(view: View?) {
@@ -97,29 +58,8 @@ class ViewPagerAdapter(
     inner class PostTwoViewHolder(itemView: View, private val mListener: PostClickListener) :
         RecyclerView.ViewHolder(itemView),
         View.OnClickListener {
-        val topicTv: TextView
-        val titleTv: TextView
-        val bodyTv: TextView
-        val kidsImgView: ImageView
-        val bgImageview: ImageView
 
-        init {
-            topicTv = itemView.findViewById(R.id.post_two_today)
-            titleTv = itemView.findViewById(R.id.post_two_title)
-            bodyTv = itemView.findViewById(R.id.post_two_body)
-            kidsImgView = itemView.findViewById(R.id.post_two_kidsImage)
-            bgImageview = itemView.findViewById(R.id.post_two_bg_image)
 
-            itemView.setOnClickListener(this)
-        }
-
-        fun bind(post: Post){
-            kidsImgView.load(post.imageUrl)
-            bgImageview.load(post.backgroundImg)
-            topicTv.text = post.topic
-            titleTv.text = post.title
-            bodyTv.text = post.body
-        }
 
         override fun onClick(view: View?) {
             mListener.onPostTypeClicked(Constants.POST_TYPE_TWO)

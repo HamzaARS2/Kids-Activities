@@ -5,10 +5,10 @@
 
     <item android:id="@+id/nav_quote_item"
         android:title="@string/quote"
-        android:icon="@drawable/ic_ballons_bottom_menu"/>
+        android:icon="@drawable/ic_quote"/>
     <item android:id="@+id/nav_recent_quotes_item"
         android:title="@string/recent_quotes"
-        android:icon="@drawable/ic_recent_bottom_menu"/>
+        android:icon="@drawable/ic_recents"/>
 
     <item android:id="@+id/nav_meditation_videos_item"
         android:title="@string/meditation_videos"

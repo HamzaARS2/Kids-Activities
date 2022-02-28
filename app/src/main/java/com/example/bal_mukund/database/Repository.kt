@@ -18,13 +18,13 @@ class Repository(
 ) {
 
     private object Constants {
-        const val BG_IMAGE = "bg_image"
-        const val IMAGE_URL = "small_image"
-        const val TYPE = "type"
-        const val TITLE = "title"
-        const val BODY = "body"
-        const val DATE = "date"
-        const val TOPIC = "topic"
+        const val POST_ID = "id"
+        const val POST_IMAGE = "imageUrl"
+        const val POST_QUOTE = "quote"
+        const val POST_TEXT_SIZE = "textSize"
+        const val POST_TEXT_COLOR = "textColor"
+        const val POST_URL_LINK = "link"
+
     }
 
     fun retrieveData(listener:FirestoreListener){
@@ -34,13 +34,13 @@ class Repository(
             .get()
             .addOnSuccessListener { docs ->
                 for (doc in docs){
-                    val type = doc.data[Constants.TYPE].toString().toInt()
-                    val imageBg = doc.data[Constants.BG_IMAGE].toString()
-                    val imageUrl = doc.data[Constants.IMAGE_URL].toString()
-                    val topic = doc.data[Constants.TOPIC].toString()
-                    val title = doc.data[Constants.TITLE].toString()
-                    val body = doc.data[Constants.BODY].toString()
-                    postList.add(Post(type,imageBg,imageUrl,topic,title,body))
+                    val id = doc.data[Constants.POST_ID].toString()
+                    val imageUrl = doc.data[Constants.POST_IMAGE].toString()
+                    val quote = doc.data[Constants.POST_QUOTE].toString()
+                    val textSize = doc.data[Constants.POST_TEXT_SIZE].toString().toFloat()
+                    val textColor = doc.data[Constants.POST_TEXT_COLOR].toString()
+                    val link = doc.data[Constants.POST_URL_LINK].toString()
+                    postList.add(Post(id,imageUrl,quote,textSize,textColor,link))
                 }
                 listener.onDataReceived(postList)
             }
@@ -59,13 +59,13 @@ class Repository(
                     val docs = task.result.documents
                     if (docs.size != 0 && docs[0].exists()){
                         val todayDoc = docs[0]
-                        val type = todayDoc.data?.get(Constants.TYPE).toString().toInt()
-                        val imageBg = todayDoc.data?.get(Constants.BG_IMAGE).toString()
-                        val imageUrl = todayDoc.data?.get(Constants.IMAGE_URL).toString()
-                        val topic = todayDoc.data?.get(Constants.TOPIC).toString()
-                        val title = todayDoc.data?.get(Constants.TITLE).toString()
-                        val body = todayDoc.data?.get(Constants.BODY).toString()
-                        val todayPost = Post(type,imageBg,imageUrl,topic,title,body)
+                        val id = todayDoc.data?.get(Constants.POST_ID).toString()
+                        val imageUrl = todayDoc.data?.get(Constants.POST_IMAGE).toString()
+                        val quote = todayDoc.data?.get(Constants.POST_QUOTE).toString()
+                        val textSize = todayDoc.data?.get(Constants.POST_TEXT_SIZE).toString().toFloat()
+                        val textColor = todayDoc.data?.get(Constants.POST_TEXT_COLOR).toString()
+                        val link = todayDoc.data?.get(Constants.POST_URL_LINK).toString()
+                        val todayPost = Post(id,imageUrl,quote,textSize,textColor,link)
                         listener.onTodayPostReceived(todayPost)
                     }
                 }

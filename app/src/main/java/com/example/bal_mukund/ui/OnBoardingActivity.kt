@@ -45,11 +45,11 @@ class OnBoardingActivity : AppCompatActivity(), View.OnClickListener {
                     binding.nextBtn.visibility = View.VISIBLE
                 }
 
-                when(position){
-                    0 ->{binding.onBoardingCL.setBackgroundColor(Color.parseColor("#FFFFFF"))}
-                    1 ->{binding.onBoardingCL.setBackgroundColor(Color.parseColor("#ADECFF"))}
-                    2 ->{binding.onBoardingCL.setBackgroundColor(Color.parseColor("#59D6F8"))}
-                }
+//                when(position){
+//                    0 ->{binding.onBoardingCL.setBackgroundColor(Color.parseColor("#FAD8FF"))}
+//                    1 ->{binding.onBoardingCL.setBackgroundColor(Color.parseColor("#FAD8FF"))}
+//                    2 ->{binding.onBoardingCL.setBackgroundColor(Color.parseColor("#FAD8FF"))}
+//                }
             }
         })
         binding.indicator.setViewPager2(binding.onboardingViewpager)

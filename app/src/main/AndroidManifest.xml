@@ -10,13 +10,30 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.BalMukund">
         <activity
+            android:name=".ui.SharedRecentPostActivity"
+            android:exported="false" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+
+        <activity
+            android:name=".ui.ShareActivity"
+            android:exported="false" />
+        <activity
             android:name=".ui.AboutUsActivity"
             android:exported="false" />
         <activity
             android:name=".ui.ConnectActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.RecentPostPagerActivity"
+            android:name=".ui.RecentPostActivity"
             android:exported="false" />
         <activity
             android:name=".ui.OnBoardingActivity"

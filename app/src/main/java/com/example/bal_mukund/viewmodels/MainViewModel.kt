@@ -12,24 +12,28 @@ class MainViewModel(
 ) : ViewModel() {
 
     private val firebaseMsg = FirebaseMessaging.getInstance()
-    private object Constants {
-        const val SEND_NOTIFICATIONS = "SEND_BALMUKUND_NOTIFICATIONS"
+
+
+    fun subscribeUsers(topic: String) {
+        if (topic == "true")
+            firebaseMsg.subscribeToTopic(topic)
     }
 
-
-    fun subscribeUsers(){
-        firebaseMsg.subscribeToTopic(Constants.SEND_NOTIFICATIONS)
+    fun unSubscribeUsers(){
+        firebaseMsg.unsubscribeFromTopic("true")
     }
 
-    fun addPost(post: Post){
+    fun addPost(post: Post) {
         repository.insertPost(post)
     }
 
-    fun getAllPosts(listener:FirestoreListener) {
+    fun getAllPosts(listener: FirestoreListener) {
         repository.retrieveData(listener)
     }
 
-    fun getLatestPost(listener: LatestPostListener){
+    fun getLatestPost(listener: LatestPostListener) {
         repository.getLatestPost(listener)
     }
+
+
 }

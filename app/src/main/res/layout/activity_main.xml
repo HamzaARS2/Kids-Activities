@@ -6,44 +6,44 @@
     android:layout_height="match_parent"
     tools:context=".ui.MainActivity"
     android:id="@+id/drawer"
-
-   >
+    android:fitsSystemWindows="true"
+    >
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-    <FrameLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        app:layout_constraintBottom_toBottomOf="@+id/main_fragments_container"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="@+id/main_fragments_container"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
 
-    </FrameLayout>
+        </FrameLayout>
 
 
 
-    <androidx.fragment.app.FragmentContainerView
-        android:id="@+id/main_fragments_container"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:visibility="visible"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/main_fragments_container"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <ImageButton
             android:id="@+id/nav_menu_btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="start"
+            android:background="@android:color/transparent"
             android:scaleType="fitCenter"
             android:src="@drawable/ic_nav_menu"
             android:visibility="gone"
-            android:background="@android:color/transparent"
             app:layout_constraintBottom_toTopOf="@+id/mainProgressbar"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.06"
@@ -51,61 +51,65 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.060000002" />
 
-    <ProgressBar
-        android:id="@+id/mainProgressbar"
-        style="?android:attr/progressBarStyle"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <androidx.coordinatorlayout.widget.CoordinatorLayout
-        android:id="@+id/coordinator"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/mainProgressbar"
-        app:layout_constraintVertical_bias="1.0">
-
-        <com.google.android.material.bottomappbar.BottomAppBar
-            android:id="@+id/bottomAppBar"
-            android:layout_width="match_parent"
+        <ProgressBar
+            android:id="@+id/mainProgressbar"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_gravity="bottom"
-            android:layout_margin="6dp"
-            app:fabCradleMargin="10dp"
-            app:elevation="10dp"
-            app:fabCradleRoundedCornerRadius="5dp"
-            app:fabCradleVerticalOffset="10dp">
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-            <com.ismaeldivita.chipnavigation.ChipNavigationBar
-                android:id="@+id/chip_navigation_bar"
-                android:layout_width="match_parent"
-                android:layout_height="65dp"
-                android:layout_marginEnd="16dp"
-                app:cnb_iconSize="30dp"
-                app:cnb_menuResource="@menu/bottom_chip_nav_bar_menu"
-                app:cnb_orientationMode="horizontal"
-                app:cnb_textAppearance="@style/Bottom_text_style"
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
+            android:id="@+id/coordinator"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/mainProgressbar"
+            app:layout_constraintVertical_bias="1.0">
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/fab"
+                android:transitionName="fabTN"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_share"
+                app:layout_anchor="@id/bottomAppBar"
                 />
 
-        </com.google.android.material.bottomappbar.BottomAppBar>
+            <com.google.android.material.bottomappbar.BottomAppBar
+                android:id="@+id/bottomAppBar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                style="@style/Widget.Material3.BottomAppBar"
+                app:layout_anchorGravity="center"
+                app:fabCradleMargin="10dp"
+                app:fabCradleRoundedCornerRadius="5dp"
+                app:fabCradleVerticalOffset="10dp">
 
-        <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:id="@+id/fab"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            style="@style/Widget.Material3.FloatingActionButton.Primary"
-            android:src="@drawable/ic_ballons_bottom_menu"
-            app:layout_anchor="@id/bottomAppBar" />
-    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+                <com.ismaeldivita.chipnavigation.ChipNavigationBar
+                    android:id="@+id/chip_navigation_bar"
+                    android:layout_width="match_parent"
+                    android:layout_height="65dp"
+                    android:layout_marginEnd="16dp"
+                    app:cnb_iconSize="30dp"
+                    app:cnb_menuResource="@menu/bottom_chip_nav_bar_menu"
+                    app:cnb_orientationMode="horizontal"
+                    app:cnb_textAppearance="@style/Bottom_text_style"
+                    />
+
+            </com.google.android.material.bottomappbar.BottomAppBar>
+
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
+
     <com.google.android.material.navigation.NavigationView
         android:id="@+id/navigation_view"
         android:layout_width="wrap_content"

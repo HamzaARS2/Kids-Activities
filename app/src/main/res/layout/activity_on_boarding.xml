@@ -5,7 +5,8 @@
     android:id="@+id/onBoardingCL"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.OnBoardingActivity">
+    tools:context=".ui.OnBoardingActivity"
+    android:background="@color/md_theme_light_primaryContainer">
 
     <androidx.viewpager2.widget.ViewPager2
         android:id="@+id/onboarding_viewpager"

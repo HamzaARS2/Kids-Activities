@@ -38,7 +38,7 @@
     <string name="recent_quotes">Recent quotes</string>
     <string name="exit">Exit</string>
     <string name="others">Others</string>
-    <string name="app_description">Specially Designed Personality Development program for children. Conceptualized and mentored by H.H. Swami Mukunananda ji. Holistic program for physical, mental, emotional and spiritual upliftment of children.</string>
+    <string name="app_description">Specially Designed Personality Development program for children. Conceptualizdren. Conceptualized and mentored by H.H. Swamidren. Conceptualized and mentored by H.H. Swamidren. Conceptualized and mentored by H.H. Swamidren. Conceptualized and mentored by H.H. Swamidren. Conceptualized and mentored by H.H. Swamidren. Conceptualized and mentored by H.H. Swamidren. Conceptualized and mentored by H.H. Swamidren. Conceptualized and mentored by H.H. Swamidren. Conceptualized and mentored by H.H. Swamied and mentored by H.H. Swami Mukunananda ji. Holistic program for physical, mental, emotional and spiritual upliftment of children.</string>
     <string name="free_classes_for_kids">Free classes for kids</string>
     <string name="more_about_swamiji">More about Swamiji</string>
     <string name="about_jkyog">About JKYog</string>
@@ -48,4 +48,13 @@
     <string name="get_started">Get Started!</string>
     <string name="skip">Skip</string>
     <string name="learn_more">Learn more</string>
+    <string name="back">Back</string>
+    <string name="share">Share</string>
+    <string name="instagram">Instagram</string>
+    <string name="youtube">Youtube</string>
+    <string name="night_mode">Night mode</string>
+    <string name="notifications">Notifications</string>
+    <string name="turn_on_off_notifications">Turn on/off notifications</string>
+    <string name="post_quote_transition">post_quote</string>
+    <string name="post_image_transition">post_image</string>
 </resources>
