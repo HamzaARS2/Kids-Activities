@@ -8,7 +8,7 @@ android {
     compileSdk 31
 
     defaultConfig {
-        applicationId "com.example.bal_mukund"
+        applicationId "com.example.kidsactivities"
         minSdk 23
         targetSdk 31
         versionCode 1
@@ -69,6 +69,9 @@ dependencies {
 
     // Palette
     implementation 'androidx.palette:palette-ktx:1.0.0'
+
+    // CircularImageView
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
 
 
     implementation 'androidx.core:core-ktx:1.7.0'

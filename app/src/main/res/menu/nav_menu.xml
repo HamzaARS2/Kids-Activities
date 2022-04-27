@@ -11,12 +11,12 @@
         android:icon="@drawable/ic_recents"/>
 
     <item android:id="@+id/nav_meditation_videos_item"
-        android:title="@string/meditation_videos"
+        android:title="@string/playlist"
         android:icon="@drawable/ic_meditation_videos"/>
 
     <item android:id="@+id/nav_connect_item"
         android:title="@string/connect"
-        android:icon="@drawable/ic_connect" />
+        android:icon="@drawable/ic_hub" />
     <item android:id="@+id/nav_settings_item"
         android:title="@string/settings"
         android:icon="@drawable/ic_settings" />

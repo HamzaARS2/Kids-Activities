@@ -3,4 +3,43 @@
     <color name="facebook_color">#4267B2</color>
     <color name="youtube_color">#FF0000</color>
     <color name="instagram_color">#fccc63</color>
+
+    <color name="black_white_txt">#FFFFFF</color>
+
+    <color name="recent_fragment_background_color">#211A18</color>
+    <color name="recent_fragment_appBar_color">#5D4037</color>
+
+    <color name="nav_icon_onPrimaryContainer">#FFDBCF</color>
+
+    <color name="md_theme_light_primary">#FFB59D</color>
+    <color name="md_theme_light_onPrimary">#5F1500</color>
+    <color name="md_theme_light_primaryContainer">#862200</color>
+    <color name="md_theme_light_onPrimaryContainer">#FFDBCF</color>
+    <color name="md_theme_light_secondary">#E7BEB2</color>
+    <color name="md_theme_light_onSecondary">#442A22</color>
+    <color name="md_theme_light_secondaryContainer">#5D4037</color>
+    <color name="md_theme_light_onSecondaryContainer">#FFDBCF</color>
+    <color name="md_theme_light_tertiary">#D7C68D</color>
+    <color name="md_theme_light_onTertiary">#3A2F05</color>
+    <color name="md_theme_light_tertiaryContainer">#524619</color>
+    <color name="md_theme_light_onTertiaryContainer">#F5E2A7</color>
+    <color name="md_theme_light_error">#FFB4A9</color>
+    <color name="md_theme_light_errorContainer">#930006</color>
+    <color name="md_theme_light_onError">#680003</color>
+    <color name="md_theme_light_onErrorContainer">#FFDAD4</color>
+    <color name="md_theme_light_background">#211A18</color>
+    <color name="md_theme_light_onBackground">#EDE0DD</color>
+    <color name="md_theme_light_surface">#211A18</color>
+    <color name="md_theme_light_onSurface">#EDE0DD</color>
+    <color name="md_theme_light_surfaceVariant">#53433F</color>
+    <color name="md_theme_light_onSurfaceVariant">#D8C2BC</color>
+    <color name="md_theme_light_outline">#A08C87</color>
+    <color name="md_theme_light_inverseOnSurface">#211A18</color>
+    <color name="md_theme_light_inverseSurface">#EDE0DD</color>
+    <color name="md_theme_light_inversePrimary">#B03000</color>
+    <color name="md_theme_light_shadow">#000000</color>
+    <color name="md_theme_light_primaryInverse">#B03000</color>
+
+
+
 </resources>

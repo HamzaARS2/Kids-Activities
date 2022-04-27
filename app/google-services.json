@@ -1,33 +1,33 @@
 {
   "project_info": {
-    "project_number": "781048999272",
-    "project_id": "balmukund-9897c",
-    "storage_bucket": "balmukund-9897c.appspot.com"
+    "project_number": "775046312209",
+    "project_id": "kids-activities-3778c",
+    "storage_bucket": "kids-activities-3778c.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:781048999272:android:990d1f8b2ab79e62e23add",
+        "mobilesdk_app_id": "1:775046312209:android:9323cab398e511167a9cb0",
         "android_client_info": {
-          "package_name": "com.example.bal_mukund"
+          "package_name": "com.example.kidsactivities"
         }
       },
       "oauth_client": [
         {
-          "client_id": "781048999272-b5buemi5svre4eanaqcqrjcrfa0oa7i7.apps.googleusercontent.com",
+          "client_id": "775046312209-8vika07uo7kd5ruovc40f6mujik7qa6u.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyA-uZbefaGsfIz6vewHTb-mqyepQNcui4w"
+          "current_key": "AIzaSyDQDxRzI-gqoKvcDM0mkXktfTM1Vx85oFM"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "781048999272-b5buemi5svre4eanaqcqrjcrfa0oa7i7.apps.googleusercontent.com",
+              "client_id": "775046312209-8vika07uo7kd5ruovc40f6mujik7qa6u.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

@@ -177,6 +177,11 @@
     <color name="md_theme_dark_inversePrimary">#B03000</color>
     <color name="md_theme_dark_shadow">#000000</color>
     <color name="md_theme_dark_primaryInverse">#B03000</color>
+
+    <color name="recent_fragment_background_color">#F0F0F0</color>
+    <color name="recent_fragment_appBar_color">#FFDBCF</color>
+
+    <color name="nav_icon_onPrimaryContainer">#3B0A00</color>
     <!--  # Orange theme colors  -->
 
     <color name="purple_200">#FFBB86FC</color>
@@ -192,6 +197,7 @@
     <color name="secondary">#4b6269</color>
     <color name="colorSecondary">#ffffff</color>
     <color name="colorOnSecondary">#ffffff</color>
+    <color name="black_white_txt">#FF000000</color>
 
     <color name="textColorPrimary">#001f27</color>
     <color name="textColorSecondary">#061e25</color>

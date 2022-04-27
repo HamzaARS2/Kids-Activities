@@ -44,9 +44,11 @@
                 android:background="#3B8A8A8A"
                 android:padding="20dp"
                 android:text="Today's Quote"
+                android:maxLines="3"
+                android:ellipsize="end"
                 android:transitionName="quoteTN"
                 android:textColor="@color/white"
-                android:textSize="18sp" />
+                android:textSize="23sp" />
         </androidx.cardview.widget.CardView>
 
 

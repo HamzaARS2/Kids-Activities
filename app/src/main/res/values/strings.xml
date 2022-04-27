@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Bal-Mukund</string>
+    <string name="app_name">Kids Activities</string>
     <string name="learn">Learn</string>
     <string name="recent">Recent</string>
     <string name="today">Today</string>
@@ -9,18 +9,16 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="bodyEx">Do unto others, as you would have them do unto you!</string>
     <string name="channel_name">BalMukund Channel</string>
-    <string name="channel_description">This channel used by BalMukund app</string>
-    <string name="today_s_quote">Today\'s topic</string>
+    <string name="channel_description">This channel used by Kids Activities app</string>
+    <string name="today_s_quote">Today\'s Quote</string>
     <string name="let_s_play_together">Post title</string>
     <string name="play_is_our_brain_s_favorite_way_of_learning">Play is our brain s favorite way of learning</string>
     <string name="settings">Settings</string>
 
     <string name="open">Open</string>
     <string name="close">Close</string>
-    <string name="the_beautiful_short_description_about_bal_mukund_app">The beautiful short description about Bal-Mukund app</string>
-    <string name="bal_mukund">Bal-Mukund</string>
-    <string name="bal_mukund_site"><u>www.bal-mukund.org</u>.</string>
-    <string name="meditation_videos">Meditation videos</string>
+    <string name="the_beautiful_short_description_about_kids_activities_app">The beautiful short description about Kids Activities</string>
+    <string name="playlist">Our playlist</string>
     <string name="about_us">About us</string>
     <string name="connect">Connect</string>
     <string name="review_the_app">Review the app</string>
@@ -38,9 +36,23 @@
     <string name="recent_quotes">Recent quotes</string>
     <string name="exit">Exit</string>
     <string name="others">Others</string>
-    <string name="app_description">Specially Designed Personality Development program for children. Conceptualizdren. Conceptualized and mentored by H.H. Swamidren. Conceptualized and mentored by H.H. Swamidren. Conceptualized and mentored by H.H. Swamidren. Conceptualized and mentored by H.H. Swamidren. Conceptualized and mentored by H.H. Swamidren. Conceptualized and mentored by H.H. Swamidren. Conceptualized and mentored by H.H. Swamidren. Conceptualized and mentored by H.H. Swamidren. Conceptualized and mentored by H.H. Swamied and mentored by H.H. Swami Mukunananda ji. Holistic program for physical, mental, emotional and spiritual upliftment of children.</string>
-    <string name="free_classes_for_kids">Free classes for kids</string>
-    <string name="more_about_swamiji">More about Swamiji</string>
+    <string name="app_description">
+<!--        Sed ut perspiciatis unde omnis iste natus error sit volupt-->
+<!--        atem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae v-->
+<!--        itae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores-->
+<!--        eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed-->
+<!--        quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum ex-->
+<!--        ercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea -->
+<!--        voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur? But I must explain to y-->
+<!--        ou how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and exp-->
+<!--        ound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids plea-->
+<!--        sure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extre-->
+<!--        mely painful. Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionall-->
+<!--        y circumstances occur in which toil and pain can procure him some great pleasure. To take a trivial example, which of us ever undertakes labo-->
+<!--        rious physical exercise, except to obtain some advantage from it? But who has any right to find fault with a man who chooses to enjoy a pleas-->
+        ure that has no annoying consequences, or one who avoids a pain that produces no resultant pleasure?</string>
+
+
     <string name="about_jkyog">About JKYog</string>
     <string name="volunteer">Volunteer</string>
     <string name="contact">Contact</string>
@@ -57,4 +69,12 @@
     <string name="turn_on_off_notifications">Turn on/off notifications</string>
     <string name="post_quote_transition">post_quote</string>
     <string name="post_image_transition">post_image</string>
+    <string name="free_classes_for_kids">Free classes for kids</string>
+    <string name="join_us_at_facebook_instagram_and_youtube">Join us at Facebook, Instagram and Youtube</string>
+
+
+    <string name="facebook_url">https://www.facebook.com/</string>
+    <string name="instagram_url">https://www.instagram.com/</string>
+    <string name="youtube_url">https://www.youtube.com/</string>
+    <string name="app_site">https://github.com/HamzaARS2</string>
 </resources>

@@ -2,55 +2,106 @@
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/post_recent_item_cv"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:id="@+id/post_recent_item_cv"
-    app:cardUseCompatPadding="true"
     android:layout_margin="6dp"
-    app:cardCornerRadius="6dp"
-    app:cardBackgroundColor="@android:color/darker_gray">
+    app:cardCornerRadius="16dp"
+    app:cardElevation="0dp"
+    app:cardUseCompatPadding="true">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-        <ImageView
+
+
+        <com.google.android.material.imageview.ShapeableImageView
             android:id="@+id/post_recent_item_imageView"
             android:layout_width="0dp"
             android:layout_height="0dp"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginVertical="14dp"
+            android:src="@drawable/test_bg"
             android:scaleType="centerCrop"
+            app:shapeAppearanceOverlay="@style/RoundedCorners"
             android:transitionName="imageTN"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintDimensionRatio="3:4"
+            app:layout_constraintDimensionRatio="1:1"
             app:layout_constraintEnd_toStartOf="@+id/guideline3"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.0"
-            app:srcCompat="@drawable/test_bg" />
+            app:layout_constraintVertical_bias="0.0" />
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/guideline3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            app:layout_constraintGuide_percent="0.4" />
+            app:layout_constraintGuide_percent="0.38" />
 
         <TextView
             android:id="@+id/post_recent_item_tv"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:text="@string/health_tip_text"
-            android:gravity="center"
-            android:textSize="18sp"
-            android:fontFamily="@font/fredoka_one"
-            android:textColor="@color/black"
             android:ellipsize="end"
-            android:maxLines="5"
+            android:fontFamily="@font/nunito_bold"
+            android:maxLines="2"
+            android:paddingVertical="6dp"
+            android:text="@string/health_tip_text"
+            android:gravity="center_vertical"
+            android:textSize="16sp"
+            android:textStyle="bold"
             android:transitionName="quoteTN"
-            android:padding="10dp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/post_recent_item_imageView"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintEnd_toStartOf="@+id/guideline21"
+            app:layout_constraintStart_toStartOf="@+id/post_recent_subTitle_tv"
+            app:layout_constraintTop_toBottomOf="@+id/post_recent_subTitle_tv" />
+
+        <TextView
+            android:id="@+id/post_recent_title_tv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:fontFamily="@font/nunito_bold"
+            android:gravity="start"
+            android:lines="1"
+            android:maxLines="1"
+            android:text="Today's quote"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/guideline21"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/guideline3"
+            app:layout_constraintTop_toTopOf="@+id/post_recent_item_imageView" />
+
+            <TextView
+                android:id="@+id/post_recent_subTitle_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="8dp"
+                android:drawablePadding="8dp"
+                android:fontFamily="@font/nunito_bold"
+                android:gravity="start"
+                android:lines="1"
+                android:maxLines="1"
+                android:text="Story of a bear"
+                android:textColor="#979797"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@+id/guideline21"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/post_recent_title_tv"
+                app:layout_constraintTop_toBottomOf="@+id/post_recent_title_tv"/>
+
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline21"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.99" />
+
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 

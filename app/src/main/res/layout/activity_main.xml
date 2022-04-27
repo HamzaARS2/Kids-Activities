@@ -90,7 +90,8 @@
                 app:layout_anchorGravity="center"
                 app:fabCradleMargin="10dp"
                 app:fabCradleRoundedCornerRadius="5dp"
-                app:fabCradleVerticalOffset="10dp">
+                app:fabCradleVerticalOffset="10dp"
+                app:hideOnScroll="true">
 
                 <com.ismaeldivita.chipnavigation.ChipNavigationBar
                     android:id="@+id/chip_navigation_bar"
